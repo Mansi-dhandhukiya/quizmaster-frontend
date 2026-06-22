@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="navbar"></div>
+<div class="card">
+  <h2>📝 Add New Question</h2>
+
+  <div class="form-group">
+    <label>Question</label>
+    <textarea id="title" placeholder="Enter question..."></textarea>
+  </div>
+
+  <div class="grid">
+    <input id="opt1" placeholder="Option 1">
+    <input id="opt2" placeholder="Option 2">
+    <input id="opt3" placeholder="Option 3">
+    <input id="opt4" placeholder="Option 4">
+  </div>
+
+  <div class="form-group">
+    <label>Correct Answer</label>
+    <input id="answer" placeholder="Enter correct answer">
+  </div>
+
+  <div class="grid">
+    <input id="category" placeholder="Category (e.g. Java, Python)">
+    <input id="difficulty" placeholder="Difficulty (Easy/Medium/Hard)">
+  </div>
+
+  <button onclick="addQuestion()">➕ Add Question</button>
+
+  <p id="msg"></p>
+</div>
+
+</body>
+<script>
+ 
+if (localStorage.getItem("adminLoggedIn") !== "true") {
+  alert("Please login first!");
+  window.location.href = "login.html";
+}
+
+fetch("navbar.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+</script>
+<script src="script.js"></script>
+</html>

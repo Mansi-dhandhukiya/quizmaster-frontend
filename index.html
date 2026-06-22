@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="navbar"></div>
+
+
+<div class="home-container">
+  <div class="home-card">
+    <h1>🎯 QuizMaster</h1>
+    <p>“Test Your Knowledge Anytime, Anywhere with Smart Quizzes.” </p>
+     
+    <div class="btn-group">
+      <a href="login.html">
+        <button class="admin-btn">👨‍💼 Add Questions</button>
+      </a>
+
+      <a href="quiz.html">
+        <button class="user-btn">🧠 Start Quiz</button>
+      </a>
+    </div>
+  </div>
+</div>
+<script>
+fetch("navbar.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="navbar"></div>
+<div class="card">
+  <h2>🔐 Admin Login</h2>
+
+  <input id="username" placeholder="Username">
+  <input id="password" type="password" placeholder="Password">
+
+  <button class="btn" onclick="login()">Login</button>
+
+  <p id="msg"></p>
+</div>
+
+<script>
+  const BASE_URL = "https://quizmaster-app-production-c2bb.up.railway.app";
+    fetch("navbar.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+function login() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    let msg = document.getElementById("msg");
+
+    fetch(`${BASE_URL}/auth/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password })
+    })
+    .then(res => {
+        if (!res.ok) throw new Error("Invalid credentials");
+        return res.json();
+    })
+    .then(data => {
+        localStorage.setItem("token", data.token);
+        window.location.href = "admin.html";
+    })
+    .catch(() => {
+        msg.style.color = "red";
+        msg.innerText = "Invalid username or password!";
+    });
+}
+</script>
+
+</body>
+</html>

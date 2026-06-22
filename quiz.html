@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="navbar"></div>
+<div class="quiz-wrapper">
+
+  <!-- Quiz Setup Card -->
+  <div class="card">
+    <h2>🧠 Create Quiz</h2>
+
+    <div class="form-group">
+      <input id="category" placeholder="Enter Category (e.g. Java)">
+    </div>
+
+    <div class="form-group">
+      <input id="numQ" type="number" placeholder="Number of Questions">
+    </div>
+
+    <div class="form-group">
+      <input id="title" placeholder="Quiz Title">
+    </div>
+
+    <button class="primary-btn" onclick="createQuiz()">🚀 Create Quiz</button>
+  </div>
+
+  <!-- Questions Section -->
+  <div class="card" id="quiz-section">
+    <h2>📋 Questions</h2>
+    <div id="quiz"></div>
+
+    <button class="submit-btn" onclick="submitQuiz()">✅ Submit Quiz</button>
+
+    <h3 id="result"></h3>
+  </div>
+
+</div>
+<script>
+fetch("navbar.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+</script>
+<script src="script.js"></script>
+</body>
+</html>

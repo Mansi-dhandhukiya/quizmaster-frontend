@@ -1,0 +1,291 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url(pic6.jpg);
+  background-size: cover;        /* image fills screen */
+  background-position: center;   /* center align */
+  background-repeat: no-repeat;
+ 
+  margin: 0;
+  padding: 0;
+}
+
+/* Card container */
+.card {
+  width: 450px;
+  margin: 60px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.card input{
+  width: 90%;
+
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+.card h2{
+  color: white;
+}
+/* Form group */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Inputs */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Focus effect */
+input:focus, textarea:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102,126,234,0.5);
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.btn{
+  width: 95%;
+  margin: 5px;
+ 
+}
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #5a67d8;
+}
+
+/* Message */
+#msg {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
+}
+
+
+/* Center container */
+.home-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+.home-card {
+  background: #1c799e;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  width: 550px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Heading */
+.home-card h1 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+/* Subtitle */
+.home-card p {
+  color: rgb(243, 225, 225);
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-style: italic;
+}
+
+/* Buttons group */
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Common button style */
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* Navbar */
+.navbar {
+  width: 100%;
+  padding: 15px 30px;
+  background: #077697;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Logo */
+.nav-logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Links */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #4facfe;
+}
+/* Admin button */
+.admin-btn {
+  background: #ff7b54;
+  color: white;
+}
+
+.admin-btn:hover {
+  background: #ff5722;
+}
+
+/* User button */
+.user-btn {
+  background: #4caf50;
+  color: white;
+}
+
+.user-btn:hover {
+  background: #388e3c;
+}
+/* Wrapper */
+.quiz-wrapper {
+  
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+/* Card */
+.card {
+  width: 400px;
+ display: block;
+ background: #1c799e;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Make Questions section wider */
+#quiz-section {
+ 
+   width: 65%;
+  max-width: 800px;
+
+}
+/* Inputs */
+.form-group input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 5px rgba(79,172,254,0.5);
+}
+
+/* Buttons */
+.primary-btn {
+  width: 100%;
+  padding: 12px;
+  background: #4facfe;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  background: #007bff;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 15px;
+  
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #388e3c;
+}
+
+/* Question */
+.question {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.question h3 {
+  margin-bottom: 10px;
+}
+
+/* Options */
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+/* Result */
+#result {
+  margin-top: 15px;
+  text-align: center;
+  color: #333;
+}
