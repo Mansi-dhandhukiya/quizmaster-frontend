@@ -1,7 +1,7 @@
 let quizId = null;
 let questions = [];
 
-const BASE_URL = "https://quizmaster-app-production-c2bb.up.railway.app";
+const BASE_URL = "quizmaster-app-production-a9fd.up.railway.app";
 
 function getAuthHeaders() {
     return {
